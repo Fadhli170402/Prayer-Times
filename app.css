@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fdf9f5;
+    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 0%),
+                    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 0%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+#clock {
+    font-size: 200%;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+#app {
+    width: 90%;
+    max-width: 80%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 0.75em;
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0 0 20px 0;
+}
+
+.location-date {
+    display: flex;
+    justify-content: space-between;
+    background: #fafafa;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin: 0 0 20px 0;
+    font-size: 0.85em;
+    gap: 10px;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.location-icon {
+    color: #4ac550;
+    font-size: 1.1em;
+}
+
+.date-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.date-icon {
+    color: #ffb347;
+    font-size: 1.1em;
+}
+
+.clock-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.clock {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.clock span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.clock .separator {
+    color: #aaa;
+}
+
+.countdown {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+.countdown strong {
+    color: #ffb347;
+    font-weight: 500;
+}
+
+.prayer-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.prayer-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.prayer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    /* border-width: 0 0 30px 30px; */
+    border-color: transparent transparent #f5f5f5 transparent;
+}
+
+.prayer-card .icon {
+    font-size: 1.3em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f5e9;
+    border-radius: 50%;
+    color: #2e7d32;
+    margin-right: 15px;
+}
+
+.prayer-card .name {
+    text-align: left;
+    flex: 1;
+}
+
+.prayer-card .name .arabic {
+    font-size: 0.7em;
+    color: #777;
+    font-family: 'Arial', serif;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.prayer-card .time {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+}
+
+.current-prayer {
+    background: #fff8e1;
+    border-left: 4px solid #ffb347;
+}
+
+.current-prayer .icon {
+    background: #fff3e0;
+    color: #ff8f00;
+}
+
+.current-prayer .name {
+    color: #ff8f00;
+}
+
+.next-prayer {
+    background: #e8f5e9;
+    border-left: 4px solid #4ac550;
+}
+
+.next-prayer .icon {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+.refresh-btn {
+    background: #f5f5f5;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    color: #555;
+    cursor: pointer;
+    margin: 20px auto 10px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.refresh-btn:hover {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.footer {
+    font-size: 0.7em;
+    color: #999;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.footer .bismillah {
+    font-family: 'Arial', serif;
+    font-size: 0.9em;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    margin: 5px 0;
+}
