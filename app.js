@@ -30,7 +30,8 @@ function success(position){
    prayerTimes(position.coords.latitude, position.coords.longitude);
 }
 function error(){
-    console.log('Error: Geolocation is not available.');
+    // Default location: Jakarta
+   prayerTimes(-6.21462, 106.84513);
 }
 
 function userLocation(){
